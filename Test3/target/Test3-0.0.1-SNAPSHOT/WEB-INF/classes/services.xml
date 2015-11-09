@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service name="HighScoreService">
+    
+    <description>
+        Simple implementation of a HighScoreService.
+    </description>
+    
+    <parameter name="ServiceClass">com.itcuties.serivces.HighScoreService</parameter>
+    
+    <operation name="addHighScore" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://serivces.itcuties.com/xsd">
+		<actionMapping>http://serivces.itcuties.com/xsd/addHighScore</actionMapping>
+		<messageReceiver class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+    </operation>
+    
+    <operation name="getHighScores" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://serivces.itcuties.com/xsd">
+		<actionMapping>http://serivces.itcuties.com/xsd/getHighScores</actionMapping>
+		<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+    
+    <operation name="getHighScoresForNickname" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://serivces.itcuties.com/xsd">
+		<actionMapping>http://serivces.itcuties.com/xsd/getHighScoresForNickname</actionMapping>
+		<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+    
+    <operation name="getHighScoresSize" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://serivces.itcuties.com/xsd">
+		<actionMapping>http://serivces.itcuties.com/xsd/getHighScoresSize</actionMapping>
+		<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+    
+</service>
